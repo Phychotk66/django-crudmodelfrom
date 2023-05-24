@@ -1,0 +1,18 @@
+{% extends 'home.html' %}
+{% block content%}
+
+<div class="row">
+    <div class="col-sm-8 offset-2">
+        <h4 class="alert alert-info">Update Informations </h4>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ from.as_p }}
+            <input type="submit" value="Update" class="btn btn-success"> 
+          <a href="{% url 'ome'%}"class="btn btn-info"> Back to Home </a>
+        </form>
+
+
+    </div>
+</div>
+
+{% endblock content%}
